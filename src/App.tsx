@@ -1,9 +1,10 @@
 import { SafeAreaView, Text, View } from "react-native";
+import Login from "./modules/login";
 
 const App = () => {
 return (
     <SafeAreaView>
-        <Text>Testando</Text>
+        <Login/>
     </SafeAreaView>
 )
 };
