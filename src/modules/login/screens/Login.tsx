@@ -4,6 +4,7 @@ import Button from "../../../shared/components/button/Button";
 import Input from "../../../shared/components/input/Input";
 import Text from "../../../shared/components/text/Text";
 import { textTypes } from "../../../shared/components/text/textTypes";
+import { theme } from "../../../shared/themes/theme";
 
 const Login = () => {
     const handleOnPress = () => {
@@ -15,7 +16,7 @@ const Login = () => {
             <ContainerLogin>
                 <Text type={textTypes.TITLE_BOLD}>login</Text>
                 <Input/>
-                <Button margin="16px" onPress={handleOnPress} title="ENTRAR"/>
+                <Button type={theme.buttons.buttonsTheme.primary} margin="16px" onPress={handleOnPress} title="ENTRAR"/>
             </ContainerLogin>
         </View>
     )
