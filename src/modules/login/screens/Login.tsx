@@ -1,4 +1,4 @@
-import { View  } from "react-native";
+import { View } from "react-native";
 import { ContainerLogin } from "./styles/login.style";
 import Button from "../../../shared/components/button/Button";
 import Input from "../../../shared/components/input/Input";
@@ -15,8 +15,11 @@ const Login = () => {
         <View>
             <ContainerLogin>
                 <Text type={textTypes.TITLE_BOLD}>login</Text>
-                <Input/>
-                <Button type={theme.buttons.buttonsTheme.primary} margin="16px" onPress={handleOnPress} title="ENTRAR"/>
+                <Input />
+                <Button
+                    type={theme.buttons.buttonsTheme.primary}
+                    margin="16px" onPress={handleOnPress}
+                    title="ENTRAR" />
             </ContainerLogin>
         </View>
     )

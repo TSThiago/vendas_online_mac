@@ -1,6 +1,7 @@
 import styled from "styled-components/native";
 import { theme } from "../../themes/theme";
 import LinearGradient from "react-native-linear-gradient";
+import { Button } from "react-native";
 
 interface ButtonContainerProps {
     margin?: string;
@@ -12,6 +13,7 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
     border-radius: 4px;
     justify-content: center;
     align-items: center;
+    flex-direction: row;
     ${(props) => props.margin ? `margin: ${props.margin};` : ''}
 `
 
@@ -21,6 +23,7 @@ export const GradientButton = styled(LinearGradient)<ButtonContainerProps>`
     border-radius: 4px;
     justify-content: center;
     align-items: center;
+    flex-direction:row;
     ${(props) => props.margin ? `margin: ${props.margin};` : ''}
 `;
 
@@ -29,4 +32,12 @@ export const SecondaryButton = styled(ButtonContainer)<ButtonContainerProps>`
     background-color: transparent;
     border-width: 1px;
     border-color: ${theme.colors.mainTheme.primary};
+`
+
+export const DisabledButton = styled(ButtonContainer)<ButtonContainerProps>`
+    background-color: ${theme.colors.grayTheme.gray100};
+`
+
+export const ActivityIndicatorButton = styled.ActivityIndicator`
+    margin-left: 8px;
 `
