@@ -18,7 +18,7 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
 `
 
 export const GradientButton = styled(LinearGradient)<ButtonContainerProps>`
-    width: 100%;
+    width: 90%;
     height: 100%;
     border-radius: 4px;
     justify-content: center;

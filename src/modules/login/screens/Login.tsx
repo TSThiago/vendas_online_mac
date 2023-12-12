@@ -15,7 +15,7 @@ const Login = () => {
         <View>
             <ContainerLogin>
                 <Text type={textTypes.TITLE_BOLD}>login</Text>
-                <Input />
+                <Input placeholder="Digite seu email" title="Email:"/>
                 <Button
                     type={theme.buttons.buttonsTheme.primary}
                     margin="16px" onPress={handleOnPress}
