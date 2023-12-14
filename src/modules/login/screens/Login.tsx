@@ -17,10 +17,16 @@ const Login = () => {
             <ContainerLogin>
                 <Icon name="home3" size={44}></Icon>
                 <Text type={textTypes.TITLE_BOLD}>login</Text>
-                <Input 
-                errorMessage="Usuário ou senha inválidos" 
-                placeholder="Digite seu email"
-                title="Email:"/>
+                <Input
+                    margin='0px 0px 8px 0px'
+                    errorMessage="Usuário ou senha inválidos"
+                    placeholder="Digite seu email"
+                    title="Email:" />
+                <Input
+                    secureTextEntry
+                    errorMessage="Usuário ou senha inválidos"
+                    placeholder="Digite sua senha"
+                    title="Senha:" />
                 <Button
                     type={theme.buttons.buttonsTheme.primary}
                     margin="16px" onPress={handleOnPress}
