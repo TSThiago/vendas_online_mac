@@ -5,10 +5,10 @@ import Input from "../../../shared/components/input/Input";
 import Text from "../../../shared/components/text/Text";
 import { textTypes } from "../../../shared/components/text/textTypes";
 import { theme } from "../../../shared/themes/theme";
-import { Icon } from "../../../shared/components/icon/Icon";
+import axios from "axios";
 
 const Login = () => {
-    const handleOnPress = () => {
+    const handleOnPress = async () => {
         console.log('CLICOU')
     };
 
