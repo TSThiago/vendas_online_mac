@@ -5,29 +5,43 @@ import Input from "../../../shared/components/input/Input";
 import Text from "../../../shared/components/text/Text";
 import { textTypes } from "../../../shared/components/text/textTypes";
 import { theme } from "../../../shared/themes/theme";
-import axios from "axios";
+import { useLogin } from "../hooks/useLogin";
 
 const Login = () => {
-    const handleOnPress = async () => {
-        console.log('CLICOU')
-    };
+    const {
+        email,
+        password,
+        loading,
+        errorMessage,
+        handleOnPress,
+        handleOnChangeEmail,
+        handleOnChangePassword
+    } = useLogin();
+
 
     return (
         <View>
             <ContainerLogin>
-                <LogoImage resizeMode="center" source={require('../../../assets/images/logo.png')}/>
+                <LogoImage resizeMode="center" source={require('../../../assets/images/logo.png')} />
                 <Text type={textTypes.TITLE_BOLD}>login</Text>
                 <Input
+                    value={email}
                     margin='0px 0px 8px 0px'
-                    errorMessage="Usuário ou senha inválidos"
                     placeholder="Digite seu email"
-                    title="Email:" />
+                    title="Email:"
+                    onChange={handleOnChangeEmail}
+                />
                 <Input
+                    value={password}
                     secureTextEntry
-                    errorMessage="Usuário ou senha inválidos"
+                    errorMessage={errorMessage}
                     placeholder="Digite sua senha"
-                    title="Senha:" />
+                    title="Senha:"
+                    onChange={handleOnChangePassword}
+                />
+
                 <Button
+                    loading={loading}
                     type={theme.buttons.buttonsTheme.primary}
                     margin="16px" onPress={handleOnPress}
                     title="ENTRAR" />
